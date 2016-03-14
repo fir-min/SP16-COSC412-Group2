@@ -1,3 +1,9 @@
 <h1>Welcome#index</h1>
 <p>This is the temporary root page :)</p><br />
+<p> <%=User.find(1).username%> is a <%=User.find(1).usertype%></p>
+<%if (User.create(username: 'juliet', usertype: 'manager').valid?)%> <!--create a user using erb-->
+	<p> A new user has been created </p>
+<%else%>
+    <p> new user has failed to be created </p>
+<%end%>
 
